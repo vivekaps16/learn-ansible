@@ -1,6 +1,0 @@
-- name: Demo playbook
-  hosts: all
-  tasks: 
-    - name: print the message
-      ansible.builtin.debug:
-        msg: Hello Yaml. My First Script
