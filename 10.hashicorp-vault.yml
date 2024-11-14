@@ -1,0 +1,6 @@
+- name: Get Paswd from Vault
+  hosts: localhost
+  connection: local
+  tasks:
+    - name: get passwd
+      msg: "{{ lookup('hashi_vault', 'test/data/credentials:password token={{ vault_token }} url=https://34.201.38.138:8200 validate_certs=False')}}"
