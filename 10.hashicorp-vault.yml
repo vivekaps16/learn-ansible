@@ -3,4 +3,5 @@
   connection: local
   tasks:
     - name: get passwd
+      ansible.builtin.debug:
       msg: "{{ lookup('hashi_vault', 'test/data/credentials:password token={{ vault_token }} url=https://34.201.38.138:8200 validate_certs=False')}}"
